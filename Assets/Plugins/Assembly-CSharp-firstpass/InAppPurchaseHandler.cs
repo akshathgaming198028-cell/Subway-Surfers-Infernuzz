@@ -30,16 +30,14 @@ public class InAppPurchaseHandler
 		return transactionAndProductId.Split(',')[1];
 	}
 
-	[DllImport("__Internal")]
-	private static extern bool purchaseHandlerCanMakePayments();
+	private static bool purchaseHandlerCanMakePayments() { return default(bool); }
 
 	public static bool canMakePayments()
 	{
 		return true;
 	}
 
-	[DllImport("__Internal")]
-	private static extern void purchaseHandlerInitPurchase(string gameobjectName, string onSuccessMethodName, string onFailureMethodName);
+	private static void purchaseHandlerInitPurchase(string gameobjectName, string onSuccessMethodName, string onFailureMethodName) { }
 
 	public static void initPurchase(string gameobjectName, string onSuccessMethodName, string onFailureMethodName)
 	{
@@ -53,8 +51,7 @@ public class InAppPurchaseHandler
 		initializedForPurchase = true;
 	}
 
-	[DllImport("__Internal")]
-	private static extern void purchaseHandlerResetForPurchase();
+	private static void purchaseHandlerResetForPurchase() { }
 
 	public static void resetForPurchase()
 	{
@@ -63,8 +60,7 @@ public class InAppPurchaseHandler
 		initializedForPurchase = false;
 	}
 
-	[DllImport("__Internal")]
-	private static extern void purchaseHandlerInitProductRequest(string gameobjectName, string onSuccessMethodName, string onFailureMethodName);
+	private static void purchaseHandlerInitProductRequest(string gameobjectName, string onSuccessMethodName, string onFailureMethodName) { }
 
 	public static void initProductRequest(string gameobjectName, string onSuccessMethodName, string onFailureMethodName)
 	{
@@ -78,8 +74,7 @@ public class InAppPurchaseHandler
 		initializedForProductRequest = true;
 	}
 
-	[DllImport("__Internal")]
-	private static extern void purchaseHandlerResetForProductRequest();
+	private static void purchaseHandlerResetForProductRequest() { }
 
 	public static void resetForProductRequest()
 	{
@@ -88,8 +83,7 @@ public class InAppPurchaseHandler
 		initializedForProductRequest = false;
 	}
 
-	[DllImport("__Internal")]
-	private static extern void purchaseHandlerStartPurchase(string productIdentifier);
+	private static void purchaseHandlerStartPurchase(string productIdentifier) { }
 
 	public static void startPurchase(string productIdentifier)
 	{
@@ -104,8 +98,7 @@ public class InAppPurchaseHandler
 		}
 	}
 
-	[DllImport("__Internal")]
-	private static extern void purchaseHandlerCallbackHasBeenHandled(string transactionAndProductId);
+	private static void purchaseHandlerCallbackHasBeenHandled(string transactionAndProductId) { }
 
 	public static void callbackHasBeenHandled(string transactionAndProductIdentifier)
 	{
@@ -115,8 +108,7 @@ public class InAppPurchaseHandler
 		}
 	}
 
-	[DllImport("__Internal")]
-	private static extern void purchaseHandlerQueryProducts(string productIds);
+	private static void purchaseHandlerQueryProducts(string productIds) { }
 
 	public static void queryProducts(string productIds)
 	{

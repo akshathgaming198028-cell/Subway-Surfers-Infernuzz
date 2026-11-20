@@ -14,8 +14,7 @@ public class FacebookBinding
 		};
 	}
 
-	[DllImport("__Internal")]
-	private static extern void _facebookInit(string applicationId);
+	private static void _facebookInit(string applicationId) { }
 
 	public static void init(string applicationId)
 	{
@@ -26,8 +25,7 @@ public class FacebookBinding
 		Facebook.instance.accessToken = getAccessToken();
 	}
 
-	[DllImport("__Internal")]
-	private static extern bool _facebookIsLoggedIn();
+	private static bool _facebookIsLoggedIn() { return default(bool); }
 
 	public static bool isSessionValid()
 	{
@@ -38,8 +36,7 @@ public class FacebookBinding
 		return false;
 	}
 
-	[DllImport("__Internal")]
-	private static extern string _facebookGetFacebookAccessToken();
+	private static string _facebookGetFacebookAccessToken() { return default(string); }
 
 	public static string getAccessToken()
 	{
@@ -50,8 +47,7 @@ public class FacebookBinding
 		return string.Empty;
 	}
 
-	[DllImport("__Internal")]
-	private static extern void _facebookExtendAccessToken();
+	private static void _facebookExtendAccessToken() { }
 
 	public static void extendAccessToken()
 	{
@@ -71,8 +67,7 @@ public class FacebookBinding
 		loginWithRequestedPermissions(permissions, null);
 	}
 
-	[DllImport("__Internal")]
-	private static extern void _facebookLoginWithRequestedPermissions(string perms, string urlSchemeSuffix);
+	private static void _facebookLoginWithRequestedPermissions(string perms, string urlSchemeSuffix) { }
 
 	public static void loginWithRequestedPermissions(string[] permissions, string urlSchemeSuffix)
 	{
@@ -83,8 +78,7 @@ public class FacebookBinding
 		}
 	}
 
-	[DllImport("__Internal")]
-	private static extern void _facebookLogout();
+	private static void _facebookLogout() { }
 
 	public static void logout()
 	{
@@ -110,8 +104,7 @@ public class FacebookBinding
 		showDialog("stream.publish", options);
 	}
 
-	[DllImport("__Internal")]
-	private static extern void _facebookShowDialog(string dialogType, string json);
+	private static void _facebookShowDialog(string dialogType, string json) { }
 
 	public static void showDialog(string dialogType, Dictionary<string, string> options)
 	{
@@ -121,8 +114,7 @@ public class FacebookBinding
 		}
 	}
 
-	[DllImport("__Internal")]
-	private static extern void _facebookRestRequest(string restMethod, string httpMethod, string jsonDict);
+	private static void _facebookRestRequest(string restMethod, string httpMethod, string jsonDict) { }
 
 	public static void restRequest(string restMethod, string httpMethod, Hashtable keyValueHash)
 	{

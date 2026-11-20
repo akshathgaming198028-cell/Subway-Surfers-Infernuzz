@@ -191,54 +191,37 @@ public class ChartBoost : MonoBehaviour
 	{
 	}
 
-	[DllImport("__Internal")]
-	private static extern void bridge_initAndStartSession(string appId, string appSignature);
+	private static void bridge_initAndStartSession(string appId, string appSignature) { }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_cacheInterstitial();
+	private static void bridge_cacheInterstitial() { }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_cacheInterstitialLocation(string location);
+	private static void bridge_cacheInterstitialLocation(string location) { }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_showInterstitial();
+	private static void bridge_showInterstitial() { }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_showInterstitialLocation(string location);
+	private static void bridge_showInterstitialLocation(string location) { }
 
-	[DllImport("__Internal")]
-	private static extern bool bridge_hasCachedInterstitial();
+	private static bool bridge_hasCachedInterstitial() { return default(bool); }
 
-	[DllImport("__Internal")]
-	private static extern bool bridge_hasCachedInterstitialLocation(string location);
+	private static bool bridge_hasCachedInterstitialLocation(string location) { return default(bool); }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_cacheMoreApps();
+	private static void bridge_cacheMoreApps() { }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_showMoreApps();
+	private static void bridge_showMoreApps() { }
 
-	[DllImport("__Internal")]
-	private static extern bool bridge_getShouldRequestInterstitial();
+	private static bool bridge_getShouldRequestInterstitial() { return default(bool); }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_setShouldRequestInterstitial(bool should);
+	private static void bridge_setShouldRequestInterstitial(bool should) { }
 
-	[DllImport("__Internal")]
-	private static extern bool bridge_getShouldDisplayInterstitial();
+	private static bool bridge_getShouldDisplayInterstitial() { return default(bool); }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_setShouldDisplayInterstitial(bool should);
+	private static void bridge_setShouldDisplayInterstitial(bool should) { }
 
-	[DllImport("__Internal")]
-	private static extern bool bridge_getShouldDisplayLoadingViewForMoreApps();
+	private static bool bridge_getShouldDisplayLoadingViewForMoreApps() { return default(bool); }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_setShouldDisplayLoadingViewForMoreApps(bool should);
+	private static void bridge_setShouldDisplayLoadingViewForMoreApps(bool should) { }
 
-	[DllImport("__Internal")]
-	private static extern bool bridge_getShouldDisplayMoreApps();
+	private static bool bridge_getShouldDisplayMoreApps() { return default(bool); }
 
-	[DllImport("__Internal")]
-	private static extern void bridge_setShouldDisplayMoreApps(bool should);
+	private static void bridge_setShouldDisplayMoreApps(bool should) { }
 }

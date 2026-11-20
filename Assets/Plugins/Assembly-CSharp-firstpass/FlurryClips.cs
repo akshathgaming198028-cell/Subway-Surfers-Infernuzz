@@ -147,12 +147,9 @@ public class FlurryClips : MonoBehaviour
 		_onVideoDidFinish = (Action<string>)Delegate.Remove(_onVideoDidFinish, handler);
 	}
 
-	[DllImport("__Internal")]
-	private static extern void fcbridge_initAndEnableVideoAds();
+	private static void fcbridge_initAndEnableVideoAds() { }
 
-	[DllImport("__Internal")]
-	private static extern bool fcbridge_videoAdIsAvailable(string hook);
+	private static bool fcbridge_videoAdIsAvailable(string hook) { return default(bool); }
 
-	[DllImport("__Internal")]
-	private static extern void fcbridge_openVideoTakeover(string hook, string orientation, string rewardMessage);
+	private static void fcbridge_openVideoTakeover(string hook, string orientation, string rewardMessage) { }
 }
